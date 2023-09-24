@@ -1,6 +1,7 @@
 
+// import 'package:bookly/Features/Splash/presentation/views/widgets/splash_view_body.dart';
 import 'package:bookly/Features/Splash/presentation/views/widgets/splash_view_body.dart';
-import 'package:bookly/Features/home/presentation/views/homeScreen.dart';
+
 import 'package:go_router/go_router.dart';
 
 
@@ -14,7 +15,7 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const MainHomeScreen(),
+        builder: (context, state) =>  SplashScreen(),
       ),
       
       

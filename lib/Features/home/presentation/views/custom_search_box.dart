@@ -15,20 +15,21 @@ class CustomSearchBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       clipBehavior: Clip.antiAliasWithSaveLayer,
-      height: 42,
-      width: size.width * 0.9,
+      height: 40,
+      width: size.width * 0.82,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
+        color: Colors.white,
+          borderRadius: BorderRadius.circular(32),
           border: Border.all(
-              width: 1, color: Colors.black.withOpacity(0.5))),
+              width: .5, color: Colors.grey.withOpacity(0.5))),
       child: CustomTextField(
         //controller: searchController,
         onSubmitted: (value) {
 
         },
-        hintText: 'What are you looking for?',
+        hintText: 'Search',
         prefixIcon: Icons.search,
-        iconColor: Colors.grey[800],
+        iconColor: Colors.grey,
       ),
     );
   }
