@@ -1,5 +1,5 @@
 import 'package:bookly/Features/home/presentation/views/custom_search_box.dart';
-import 'package:bookly/Features/home/presentation/views/topprofile.dart';
+import 'package:bookly/Features/home/presentation/views/widgets/topprofile.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/viewitems.dart';
 
 import 'package:flutter/material.dart';

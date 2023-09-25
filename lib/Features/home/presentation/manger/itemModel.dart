@@ -1,12 +1,16 @@
+import 'package:flutter/material.dart';
+
 class Item {
   final String image;
   final String rate;
   final String name;
   final String location;
   final String price;
+  Icon ?fav;
 
   Item(
-      {required this.image,
+      {this.fav,
+        required this.image,
       required this.rate,
       required this.name,
       required this.location,
