@@ -3,6 +3,7 @@ import 'package:bookly/Features/home/presentation/views/homelayout.dart';
 import 'package:bookly/Features/registration/presentation/views/background.dart';
 import 'package:bookly/Features/registration/presentation/views/customtxtformfield.dart';
 import 'package:bookly/Features/registration/presentation/views/signin.dart';
+import 'package:bookly/constants.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -45,8 +46,8 @@ class SignUp extends StatelessWidget {
                           hint: "Username",
                           preicon: Icon(
                             Icons.person,
-                            size: MediaQuery.of(context).size.width * 0.06,
-                            color: Color.fromARGB(255, 225, 121, 243),
+                            size: MediaQuery.of(context).size.width * 0.04,
+                            color: kPrimaryColor,
                           ),
                           text: TextInputType.name,
                         )),
@@ -64,8 +65,8 @@ class SignUp extends StatelessWidget {
                           hint: 'Password',
                           preicon: Icon(
                             Icons.lock,
-                            size: MediaQuery.of(context).size.width * 0.06,
-                            color: Color.fromARGB(255, 225, 121, 243),
+                            size: MediaQuery.of(context).size.width * 0.04,
+                            color: kPrimaryColor,
                           ),
                           text: TextInputType.visiblePassword,
                         )),
@@ -83,8 +84,8 @@ class SignUp extends StatelessWidget {
                           hint: "Email",
                           preicon: Icon(
                             Icons.email,
-                            size: MediaQuery.of(context).size.width * 0.06,
-                            color: Color.fromARGB(255, 225, 121, 243),
+                            size: MediaQuery.of(context).size.width * 0.04,
+                            color: kPrimaryColor,
                           ),
                           text: TextInputType.emailAddress,
                           sign: '@',
@@ -104,8 +105,8 @@ class SignUp extends StatelessWidget {
                           hint: "Mobile",
                           preicon: Icon(
                             Icons.lock,
-                            size: MediaQuery.of(context).size.width * 0.06,
-                            color: Color.fromARGB(255, 225, 121, 243),
+                            size: MediaQuery.of(context).size.width * 0.04,
+                            color: kPrimaryColor,
                           ),
                           text: TextInputType.phone,
                         )),
@@ -187,7 +188,7 @@ class SignUp extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.06,
+                    height: MediaQuery.of(context).size.height * 0.04,
                   ),
                   Text(
                     "Or create account using social media",

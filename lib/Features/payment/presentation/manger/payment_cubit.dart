@@ -1,11 +1,9 @@
 
+import 'package:bookly/Features/payment/presentation/manger/payment_states.dart';
+import 'package:bookly/Features/payment/presentation/views/by_hand/by_hand_view.dart';
+import 'package:bookly/Features/payment/presentation/views/cash/views/cash_phone_number_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:signin_signup/Features/payment/presentation/manger/payment_states.dart';
-import 'package:signin_signup/Features/payment/presentation/views/by_hand/by_hand_view.dart';
-import 'package:signin_signup/Features/payment/presentation/views/cash/views/cash_phone_number_view.dart';
-import 'package:signin_signup/Features/payment/presentation/views/master_card/views/master_card_view.dart';
-import 'package:signin_signup/Features/payment/presentation/views/visa/visa_view.dart';
 
 class PaymentCubit extends Cubit<PaymentStates>{
   PaymentCubit(): super(PaymentInitialState(
@@ -32,8 +30,8 @@ class PaymentCubit extends Cubit<PaymentStates>{
     'assets/images/byhand.png',
   ];
   List<Widget> paymentView =[
-    const MasterCardView(),
-    const VisaCardView(),
+    // const MasterCardView(),
+    // const VisaCardView(),
     const CashPhoneNumberView(),
     const ByHandView(),
 ];

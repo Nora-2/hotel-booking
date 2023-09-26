@@ -60,7 +60,7 @@ class HomeLayout extends StatelessWidget {
            inactiveColor: Colors.grey
               ),
               BottomNavyBarItem(
-             icon: Icon(Icons.people),
+             icon: Icon(Icons.explore),
              title: Text("Explore"),
              activeColor: kPrimaryColor,
              inactiveColor: Colors.grey

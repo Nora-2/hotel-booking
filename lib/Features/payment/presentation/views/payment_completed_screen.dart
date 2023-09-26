@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:signin_signup/Features/profile/presentation/views/delivery.dart';
-import 'package:signin_signup/core/widgets/custom_main_button.dart';
 
 class PaymentCompletedScreen extends StatelessWidget {
   const PaymentCompletedScreen({Key? key}) : super(key: key);
@@ -49,15 +47,15 @@ class PaymentCompletedScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: size.height * 0.1),
-            CustomMainButton(
-                size: size*0.7,
-                backgroundColor: Colors.black,
-                text: 'Follow Your Order',
-                textColor: Colors.white,
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Delivery()));
-                }
-            ),
+            // CustomMainButton(
+            //     size: size*0.7,
+            //     backgroundColor: Colors.black,
+            //     text: 'Follow Your Order',
+            //     textColor: Colors.white,
+            //     onPressed: (){
+            //       Navigator.push(context, MaterialPageRoute(builder: (context)=>const Delivery()));
+            //     }
+            // ),
 
           ],
         ),

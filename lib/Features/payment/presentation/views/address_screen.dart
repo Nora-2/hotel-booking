@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:signin_signup/Features/payment/presentation/views/edit_address_screen.dart';
-import 'package:signin_signup/core/widgets/custom_container_details.dart';
-import 'package:signin_signup/core/widgets/custom_main_button.dart';
 
 
 class AddressScreen extends StatelessWidget {
@@ -9,7 +6,7 @@ class AddressScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    // Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -28,7 +25,7 @@ class AddressScreen extends StatelessWidget {
                 TextStyle(fontWeight: FontWeight.w600),
               ),
               const SizedBox(height: 3,),
-              CustomContainerDetails(textColor: Colors.grey,size: size,text: 'Mohamed Gamal Montaseb'),
+              // CustomContainerDetails(textColor: Colors.grey,size: size,text: 'Mohamed Gamal Montaseb'),
               const SizedBox(height: 14,),
               const Text(
                 'Phone Number',
@@ -36,7 +33,7 @@ class AddressScreen extends StatelessWidget {
                 TextStyle(fontWeight: FontWeight.w600),
               ),
               const SizedBox(height: 3,),
-              CustomContainerDetails(textColor: Colors.grey,size: size,text: '+20 123456789'),
+              // CustomContainerDetails(textColor: Colors.grey,size: size,text: '+20 123456789'),
               const SizedBox(height: 14,),
               const Text(
                 'Address 1',
@@ -44,7 +41,7 @@ class AddressScreen extends StatelessWidget {
                 TextStyle(fontWeight: FontWeight.w600),
               ),
               const SizedBox(height: 3,),
-              CustomContainerDetails(textColor: Colors.grey,size: size,text: '20 Emad El Din St., DOWNTOWN'),
+              // CustomContainerDetails(textColor: Colors.grey,size: size,text: '20 Emad El Din St., DOWNTOWN'),
               const SizedBox(height: 14,),
               const Text(
                 'Address 2',
@@ -52,13 +49,13 @@ class AddressScreen extends StatelessWidget {
                 TextStyle(fontWeight: FontWeight.w600),
               ),
               const SizedBox(height: 3,),
-              CustomContainerDetails(textColor: Colors.grey,size: size,text: '37 Baghdad St., El Korba'),
+              // CustomContainerDetails(textColor: Colors.grey,size: size,text: '37 Baghdad St., El Korba'),
               const SizedBox(height: 5,),
               Align(
                 alignment: Alignment.topRight,
                 child: TextButton(
                     onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const EditAddressScreen()));
+                      // Navigator.push(context, MaterialPageRoute(builder: (context)=> const EditAddressScreen()));
                     },
                     child: const Text( 'Edit Address Information',style: TextStyle(color: Colors.black,decoration: TextDecoration.underline),)
                 ),
@@ -78,16 +75,16 @@ class AddressScreen extends StatelessWidget {
                 child: Image.asset('assets/images/map.png',fit: BoxFit.cover,),
               ),
               const SizedBox(height: 30,),
-              Center(
-                child: CustomMainButton(
-                  size: size*0.65,
-                  backgroundColor: Colors.black,
-                  text: 'Deliver to This Address',
-                  textColor: Colors.white,
-                  onPressed: (){Navigator.pop(context);},
-                  borderRadius: 16,
-                ),
-              ),
+              // Center(
+              //   child: CustomMainButton(
+              //     size: size*0.65,
+              //     backgroundColor: Colors.black,
+              //     text: 'Deliver to This Address',
+              //     textColor: Colors.white,
+              //     onPressed: (){Navigator.pop(context);},
+              //     borderRadius: 16,
+              //   ),
+              // ),
             ],
           ),
         ),

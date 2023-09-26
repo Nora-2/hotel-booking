@@ -1,9 +1,10 @@
 
 import 'package:bookly/Features/Explore/presentation/views/all.dart';
 import 'package:bookly/Features/Explore/presentation/views/beach.dart';
-import 'package:bookly/Features/Explore/presentation/views/custom_tab_bar.dart';
 import 'package:bookly/Features/Explore/presentation/views/hotel.dart';
-import 'package:bookly/Features/home/presentation/views/custom_search_box.dart';
+import 'package:bookly/Features/Explore/presentation/views/widgets/customsearchwithtabbar.dart';
+import 'package:bookly/Features/Explore/presentation/views/widgets/customtop.dart';
+
 import 'package:bookly/constants.dart';
 
 import 'package:flutter/material.dart';
@@ -82,52 +83,14 @@ class _Explore extends State<Explore> with SingleTickerProviderStateMixin {
                   ),
                 ],
               ),
-              Container(
-                  height: 200,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: kPrimaryColor,
-                    borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(50),
-                        bottomRight: Radius.circular(50)),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 30),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        SizedBox(
-                          width: 200,
-                        ),
-                        Text(
-                          'Explore Now',
-                          style: GoogleFonts.lato().copyWith(
-                            fontSize: 20,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: 'Tajawal',
-                          ),
-                        ),
-                      ],
-                    ),
-                  )),
-              Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-                SizedBox(
-                  height: 60,
-                ),
-                SizedBox(height: size.height * 0.02),
-                CustomSearchBox(size: size),
-                SizedBox(
-                  height: 10,
-                ),
-                CustomTabBar(
-                  c: _tabcontroller,
-                ),
-              ]),
+              topwidget(),
+              searchandtabbar(size: size, tabcontroller: _tabcontroller),
             ],
           ),
         ),
       ),
     );
   }
+
 }
+

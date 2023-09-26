@@ -2,7 +2,7 @@
 
 import 'package:bookly/Features/Favourite/presentation/views/widgets/custom%20favbuilder.dart';
 import 'package:bookly/Features/home/presentation/manger/itemModel.dart';
-import 'package:bookly/Features/home/presentation/views/custom_search_box.dart';
+import 'package:bookly/Features/home/presentation/views/widgets/custom_search_box.dart';
 import 'package:bookly/constants.dart';
 
 import 'package:flutter/material.dart';
@@ -26,6 +26,37 @@ class _favouriteView extends State<favouriteView> with SingleTickerProviderState
 
   @override
   Widget build(BuildContext context) {
+    List<Item>items=[Item(
+              image: 'assets/images/Rectangle 14 (1).png',
+              rate: ' 4.5',
+              name: 'Savoy Sharm El Sheikh',
+              location: 'Soho Square, Sharm El Sheikh Egypt',
+              price: '60/night'),Item(
+                                image: 'assets/images/Rectangle 14.png',
+                                rate: ' 4.5',
+                                name: 'Savoy Sharm El Sheikh',
+                                location: 'Soho Square, Sharm El Sheikh Egypt',
+                                price: '60/night'),Item(
+              image: 'assets/images/Rectangle 14 (2).png',
+              rate: ' 4.5',
+              name: 'Savoy Sharm El Sheikh',
+              location: 'Soho Square, Sharm El Sheikh Egypt',
+              price: '60/night'),Item(
+                                image: 'assets/images/Rectangle 14.png',
+                                rate: ' 4.5',
+                                name: 'Savoy Sharm El Sheikh',
+                                location: 'Soho Square, Sharm El Sheikh Egypt',
+                                price: '60/night'),Item(
+              image: 'assets/images/Rectangle 14 (3).png',
+              rate: ' 4.5',
+              name: 'Savoy Sharm El Sheikh',
+              location: 'Soho Square, Sharm El Sheikh Egypt',
+              price: '60/night'),Item(
+                                image: 'assets/images/Rectangle 14.png',
+                                rate: ' 4.5',
+                                name: 'Savoy Sharm El Sheikh',
+                                location: 'Soho Square, Sharm El Sheikh Egypt',
+                                price: '60/night')];
    
     Size size = MediaQuery.of(context).size;
     return Scaffold(
@@ -45,12 +76,7 @@ class _favouriteView extends State<favouriteView> with SingleTickerProviderState
                         shrinkWrap: true,
                        
                         itemBuilder: (context, index) => ItemfavContainer(
-                            viewItem: Item(
-                                image: 'assets/images/Rectangle 14.png',
-                                rate: ' 4.5',
-                                name: 'Savoy Sharm El Sheikh',
-                                location: 'Soho Square, Sharm El Sh...',
-                                price: '60/night')),
+                            viewItem: items[index]),
                         itemCount: 6,
                       ),
                   ),

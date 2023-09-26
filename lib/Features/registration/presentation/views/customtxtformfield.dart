@@ -1,3 +1,4 @@
+import 'package:bookly/constants.dart';
 import 'package:flutter/material.dart';
 
 
@@ -38,6 +39,7 @@ class customformfield extends StatelessWidget {
           ),
           borderSide: const BorderSide(
             color: Colors.white,
+            width: .5,
           ),
         ),
         focusedBorder: OutlineInputBorder(
@@ -45,8 +47,8 @@ class customformfield extends StatelessWidget {
             Radius.circular(MediaQuery.of(context).size.width * 0.1),
           ),
           borderSide: BorderSide(
-            color: const Color.fromARGB(255, 225, 121, 243),
-            width: MediaQuery.of(context).size.width * 0.008,
+            color: kPrimaryColor,
+            width: MediaQuery.of(context).size.width * 0.003,
           ),
         ),
       ),

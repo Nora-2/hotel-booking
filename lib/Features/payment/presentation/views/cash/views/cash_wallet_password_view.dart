@@ -15,7 +15,7 @@ class CashWalletPasswordView extends StatefulWidget {
 class _CashWalletPasswordViewState extends State<CashWalletPasswordView> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    // Size size = MediaQuery.of(context).size;
     return BlocProvider(
       create: (context) => CashCubit(),
       child: BlocConsumer<CashCubit,CashStates>(
@@ -28,43 +28,43 @@ class _CashWalletPasswordViewState extends State<CashWalletPasswordView> {
               Text('Enter your wallet password',
                 style: TextStyle(fontSize: 16),
               ),
-              const SizedBox(height: 30),
-              OtpTextField(
-                fieldWidth: 45,
-                borderWidth: 2,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                numberOfFields: 6,
-                showFieldAsBox: true,
-                borderRadius: BorderRadius.circular(10),
-                textStyle: const TextStyle(
-                  fontSize: 20,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-                keyboardType: TextInputType.number,
-                onSubmit: (String verificationCode) {
-                  setState(() {
-                    CashCubit.get(context)
-                        .changeTextButtonColor();
-                  });
-                }, // end onSubmit
-              ),
-              SizedBox(height: size.height * 0.15),
-              CustomMainButton(
-                size: size * 0.5,
-                backgroundColor: Colors.black,
-                text: 'Buy Now',
-                textColor: CashCubit.get(context).isButtonActive
-                    ? Colors.white
-                    : Colors.grey,
-                onPressed: CashCubit.get(context).isButtonActive
-                    ? () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const PaymentCompletedScreen()));
+              // const SizedBox(height: 30),
+              // OtpTextField(
+              //   fieldWidth: 45,
+              //   borderWidth: 2,
+              //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //   numberOfFields: 6,
+              //   showFieldAsBox: true,
+              //   borderRadius: BorderRadius.circular(10),
+              //   textStyle: const TextStyle(
+              //     fontSize: 20,
+              //     color: Colors.black,
+              //     fontWeight: FontWeight.bold,
+              //   ),
+              //   keyboardType: TextInputType.number,
+              //   onSubmit: (String verificationCode) {
+              //     setState(() {
+              //       CashCubit.get(context)
+              //           .changeTextButtonColor();
+              //     });
+              //   }, // end onSubmit
+              // ),
+              // SizedBox(height: size.height * 0.15),
+              // CustomMainButton(
+              //   size: size * 0.5,
+              //   backgroundColor: Colors.black,
+              //   text: 'Buy Now',
+              //   textColor: CashCubit.get(context).isButtonActive
+              //       ? Colors.white
+              //       : Colors.grey,
+              //   onPressed: CashCubit.get(context).isButtonActive
+              //       ? () {
+              //     Navigator.push(context, MaterialPageRoute(builder: (context)=> const PaymentCompletedScreen()));
                   
-                }
-                    : null,
-                borderRadius: 14,
-              ),
+              //   }
+              //       : null,
+              //   borderRadius: 14,
+              // ),
             ],
           ),
         ),

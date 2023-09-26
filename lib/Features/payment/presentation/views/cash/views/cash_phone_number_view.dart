@@ -14,8 +14,8 @@ class CashPhoneNumberView extends StatefulWidget {
 class _CashPhoneNumberViewState extends State<CashPhoneNumberView> {
   @override
   Widget build(BuildContext context) {
-    var phoneController = TextEditingController();
-    var size = MediaQuery.of(context).size;
+    // var phoneController = TextEditingController();
+    // var size = MediaQuery.of(context).size;
     return BlocProvider(
       create: (context) => CashCubit(),
       child: BlocConsumer<CashCubit, CashStates>(
@@ -30,49 +30,49 @@ class _CashPhoneNumberViewState extends State<CashPhoneNumberView> {
                 style: TextStyle(fontSize: 16),
               ),
               const SizedBox(height: 30),
-              Container(
-                decoration: BoxDecoration(
-                  color: Color(0xff262626),
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: IntlPhoneField(
-                  disableLengthCheck: true,
-                  keyboardType: TextInputType.number,
-                  initialCountryCode: 'EG',
-                  controller: phoneController,
-                  style: const TextStyle(color: Colors.white),
-                  decoration: const InputDecoration(
-                    hintText: "Phone Number",
-                    hintStyle: TextStyle(color: Colors.grey),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(14))),
-                  ),
-                  onSubmitted: (phone) {
-                    if (phoneController.text.isNotEmpty) {
-                      CashCubit.get(context).changeButtonState();
-                    }
-                  },
-                ),
-              ),
-              SizedBox(height: size.height * 0.15),
-              CustomMainButton(
-                size: size * 0.5,
-                backgroundColor: Colors.black,
-                text: 'Continue',
-                textColor: CashCubit.get(context).isButtonActive
-                    ? Colors.white
-                    : Colors.grey,
-                onPressed: CashCubit.get(context).isButtonActive
-                    ? () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                const PaymentOptionsScreen(isWallet: 1,)));
-                      }
-                    : null,
-                borderRadius: 14,
-              ),
+              // Container(
+              //   decoration: BoxDecoration(
+              //     color: Color(0xff262626),
+              //     borderRadius: BorderRadius.circular(16),
+              //   ),
+              //   child: IntlPhoneField(
+              //     disableLengthCheck: true,
+              //     keyboardType: TextInputType.number,
+              //     initialCountryCode: 'EG',
+              //     controller: phoneController,
+              //     style: const TextStyle(color: Colors.white),
+              //     decoration: const InputDecoration(
+              //       hintText: "Phone Number",
+              //       hintStyle: TextStyle(color: Colors.grey),
+              //       border: OutlineInputBorder(
+              //           borderRadius: BorderRadius.all(Radius.circular(14))),
+              //     ),
+              //     onSubmitted: (phone) {
+              //       if (phoneController.text.isNotEmpty) {
+              //         CashCubit.get(context).changeButtonState();
+              //       }
+              //     },
+              //   ),
+              // ),
+              // SizedBox(height: size.height * 0.15),
+              // CustomMainButton(
+              //   size: size * 0.5,
+              //   backgroundColor: Colors.black,
+              //   text: 'Continue',
+              //   textColor: CashCubit.get(context).isButtonActive
+              //       ? Colors.white
+              //       : Colors.grey,
+              //   onPressed: CashCubit.get(context).isButtonActive
+              //       ? () {
+              //           Navigator.push(
+              //               context,
+              //               MaterialPageRoute(
+              //                   builder: (context) =>
+              //                   const PaymentOptionsScreen(isWallet: 1,)));
+              //         }
+              //       : null,
+              //   borderRadius: 14,
+              // ),
             ],
           ),
         ),

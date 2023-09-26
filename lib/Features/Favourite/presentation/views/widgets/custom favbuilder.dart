@@ -31,14 +31,16 @@ class ItemfavContainer extends StatelessWidget {
                 Icons.location_on_outlined,
                 color: const Color(0xff870084),
               ),
-              Text(
-                viewItem.location,
-                maxLines: 1,
-                softWrap: false,
-                style: TextStyle(
-                  overflow: TextOverflow.ellipsis,
-                  fontSize: 16,
-                  color: const Color(0xff870084),
+              Container(width: 180,
+                child: Text(
+                  viewItem.location,
+                  maxLines: 1,
+                  softWrap: false,
+                  style: TextStyle(
+                    overflow: TextOverflow.ellipsis,
+                    fontSize: 16,
+                    color: const Color(0xff870084),
+                  ),
                 ),
               ),
                         ],

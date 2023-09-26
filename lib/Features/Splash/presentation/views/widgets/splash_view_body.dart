@@ -1,12 +1,10 @@
-
 import 'package:bookly/Features/Splash/presentation/views/onboard.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
-
+  static String id = 'SplashScreen';
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
@@ -35,7 +33,6 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
           ),
-          
           Container(
             padding: const EdgeInsets.all(50.0),
             alignment: Alignment.center,
@@ -44,14 +41,13 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 200,
             ),
           ),
-        
           Container(
-            padding: const EdgeInsets.only(top: 500,),
+            padding: const EdgeInsets.only(
+              top: 500,
+            ),
             alignment: Alignment.bottomCenter,
-            child:  Lottie.asset('assets/images/animation_lmw239zq.json',
-                  width: 300, height: 300),
-              
-            
+            child: Lottie.asset('assets/images/animation_lmw239zq.json',
+                width: 300, height: 300),
           ),
         ],
       ),

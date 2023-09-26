@@ -1,9 +1,7 @@
+import 'package:bookly/Features/payment/presentation/manger/payment_cubit.dart';
+import 'package:bookly/Features/payment/presentation/manger/payment_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:signin_signup/Features/payment/presentation/manger/payment_cubit.dart';
-import 'package:signin_signup/Features/payment/presentation/manger/payment_states.dart';
-import 'package:signin_signup/Features/payment/presentation/views/cash/views/cash_wallet_password_view.dart';
-
 
 class PaymentOptionsScreen extends StatelessWidget {
   const PaymentOptionsScreen({Key? key,this.isWallet=0}) : super(key: key);
@@ -78,10 +76,10 @@ class PaymentOptionsScreen extends StatelessWidget {
                       },
                   ),
                 ):Container(),
-                const SizedBox(height: 40,),
-                isWallet==0?
-                PaymentCubit.get(context).paymentView[PaymentCubit.get(context).selectedPaymentOptionIndex]:
-                const CashWalletPasswordView(),
+                // const SizedBox(height: 40,),
+                // isWallet==0?
+                // PaymentCubit.get(context).paymentView[PaymentCubit.get(context).selectedPaymentOptionIndex]:
+                // const CashWalletPasswordView(),
               ],
             ),
           ),

@@ -63,7 +63,7 @@ class itemsview extends StatelessWidget {
                           image: 'assets/images/Rectangle 8.png',
                           rate: ' 4.5',
                           name: 'Savoy Sharm El Sheikh',
-                          location: 'Soho Square, Sharm El Sh...',
+                          location: 'Soho Square, Sharm El Sheikh Egypt',
                           price: '60/night'))
                 ],
               ),
