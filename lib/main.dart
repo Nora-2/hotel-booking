@@ -4,6 +4,7 @@ import 'package:bookly/Features/Splash/presentation/views/widgets/splash_view_bo
 import 'package:bookly/Features/home/data/models/cubit_home/homecubit_cubit.dart';
 import 'package:bookly/Features/home/presentation/views/homelayout.dart';
 import 'package:bookly/Features/product_details/presentation/manger/product_details_cubit.dart';
+import 'package:bookly/Features/settings/presentation/views/settingscreen.dart';
 
 
 import 'package:flutter/material.dart';
@@ -39,8 +40,9 @@ class Hotel extends StatelessWidget {
           HomeLayout.id: (context) => HomeLayout(),
           ProductDetailsScreen.id: (context) => ProductDetailsScreen(),
         SplashScreen.id:(context) => SplashScreen(),
+        settingView.id:(context) => settingView(),
         },
-        initialRoute: SplashScreen.id,
+        initialRoute: settingView.id,
         debugShowCheckedModeBanner: false,
         theme: ThemeData.light().copyWith(
         textTheme:
