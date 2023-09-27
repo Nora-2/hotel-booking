@@ -40,7 +40,8 @@ class Hotel extends StatelessWidget {
           HomeLayout.id: (context) => HomeLayout(),
           ProductDetailsScreen.id: (context) => ProductDetailsScreen(),
         SplashScreen.id:(context) => SplashScreen(),
-        settingView.id:(context) => settingView(),
+          settingView.id:(context) => settingView(),
+      
         },
         initialRoute: settingView.id,
         debugShowCheckedModeBanner: false,
