@@ -5,7 +5,7 @@ import 'package:bookly/Features/Explore/presentation/views/hotel.dart';
 import 'package:bookly/Features/Explore/presentation/views/widgets/customsearchwithtabbar.dart';
 import 'package:bookly/Features/Explore/presentation/views/widgets/customtop.dart';
 
-import 'package:bookly/constants.dart';
+import 'package:bookly/core/utils/constants.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -67,7 +67,7 @@ class _Explore extends State<Explore> with SingleTickerProviderStateMixin {
                             ),
                           ),
                           SizedBox(
-                            height: size.height * 0.5,
+                            height: size.height * 0.50,
                             child: TabBarView(
                               controller: _tabcontroller,
                               children: [

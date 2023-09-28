@@ -29,8 +29,9 @@ class ItemContainer extends StatelessWidget {
               children: [
                 Image.asset(
                   viewItem.image,
-                  width: 250,
-                  height: 170,
+                  width: 200,
+                  height: 120,
+                  fit: BoxFit.fill,
                 ),
                 Positioned(
                   right: 15,

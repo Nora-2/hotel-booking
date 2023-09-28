@@ -1,6 +1,6 @@
 
 import 'package:bookly/Features/registration/presentation/views/signup.dart';
-import 'package:bookly/constants.dart';
+import 'package:bookly/core/utils/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

@@ -1,10 +1,7 @@
-
-
 import 'package:bookly/Features/Favourite/presentation/views/widgets/custom%20favbuilder.dart';
-import 'package:bookly/Features/home/presentation/manger/itemModel.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_search_box.dart';
-import 'package:bookly/constants.dart';
-
+import 'package:bookly/core/utils/constants.dart';
+import 'package:bookly/core/widgets/dataprovider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -16,48 +13,15 @@ class favouriteView extends StatefulWidget {
   State<favouriteView> createState() => _favouriteView();
 }
 
-class _favouriteView extends State<favouriteView> with SingleTickerProviderStateMixin {
- 
+class _favouriteView extends State<favouriteView>
+    with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    
   }
 
   @override
   Widget build(BuildContext context) {
-    List<Item>items=[Item(
-              image: 'assets/images/Rectangle 14 (1).png',
-              rate: ' 4.5',
-              name: 'Savoy Sharm El Sheikh',
-              location: 'Soho Square, Sharm El Sheikh Egypt',
-              price: '60/night'),Item(
-                                image: 'assets/images/Rectangle 14.png',
-                                rate: ' 4.5',
-                                name: 'Savoy Sharm El Sheikh',
-                                location: 'Soho Square, Sharm El Sheikh Egypt',
-                                price: '60/night'),Item(
-              image: 'assets/images/Rectangle 14 (2).png',
-              rate: ' 4.5',
-              name: 'Savoy Sharm El Sheikh',
-              location: 'Soho Square, Sharm El Sheikh Egypt',
-              price: '60/night'),Item(
-                                image: 'assets/images/Rectangle 14.png',
-                                rate: ' 4.5',
-                                name: 'Savoy Sharm El Sheikh',
-                                location: 'Soho Square, Sharm El Sheikh Egypt',
-                                price: '60/night'),Item(
-              image: 'assets/images/Rectangle 14 (3).png',
-              rate: ' 4.5',
-              name: 'Savoy Sharm El Sheikh',
-              location: 'Soho Square, Sharm El Sheikh Egypt',
-              price: '60/night'),Item(
-                                image: 'assets/images/Rectangle 14.png',
-                                rate: ' 4.5',
-                                name: 'Savoy Sharm El Sheikh',
-                                location: 'Soho Square, Sharm El Sheikh Egypt',
-                                price: '60/night')];
-   
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
@@ -69,16 +33,20 @@ class _favouriteView extends State<favouriteView> with SingleTickerProviderState
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  SizedBox(height: 150,),
                   SizedBox(
-                     height: size.height * 0.682,
+                    height: 150,
+                  ),
+                  SizedBox(
+                    height: size.height * 0.65,
                     child: ListView.builder(
-                        shrinkWrap: true,
-                       
-                        itemBuilder: (context, index) => ItemfavContainer(
-                            viewItem: items[index]),
-                        itemCount: 6,
+                      shrinkWrap: true,
+                      itemBuilder: (context, index) => Padding(
+                        padding: const EdgeInsets.only(bottom:10.0),
+                        child: ItemfavContainer(
+                            viewItem: dataprovider.favourite[index]),
                       ),
+                      itemCount: dataprovider.favourite.length,
+                    ),
                   ),
                 ],
               ),
@@ -119,9 +87,7 @@ class _favouriteView extends State<favouriteView> with SingleTickerProviderState
                 CustomSearchBox(size: size),
                 SizedBox(
                   height: 10,
-                )
-                
-              ,
+                ),
               ]),
             ],
           ),

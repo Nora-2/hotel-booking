@@ -1,5 +1,5 @@
-import 'package:bookly/Features/home/presentation/manger/itemModel.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/customItemContainer.dart';
+import 'package:bookly/core/widgets/dataprovider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -7,42 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 class HomeHotelTab extends StatelessWidget {
   HomeHotelTab({super.key});
 
- List<Item> items = [
-    Item(
-        image: 'assets/images/Rectangle 8.png',
-        rate: ' 4.5',
-        name: 'Savoy Sharm El Sheikh',
-        location: 'Soho Square, Sharm El Sheikh Egypt',
-        price: '60/night'),
-    Item(
-        image: 'assets/images/Rectangle 14@2x.png',
-        rate: ' 4.5',
-        name: 'Savoy Sharm El Sheikh',
-        location: 'Soho Square, Sharm El Sheikh Egypt',
-        price: '60/night'),Item(
-        image: 'assets/images/Rectangle 14@2x.png',
-        rate: ' 4.5',
-        name: 'Savoy Sharm El Sheikh',
-        location: 'Soho Square, Sharm El Sheikh Egypt',
-        price: '60/night'),
-     Item(
-        image: 'assets/images/Rectangle 8.png',
-        rate: ' 4.5',
-        name: 'Savoy Sharm El Sheikh',
-        location: 'Soho Square, Sharm El Sheikh Egypt',
-        price: '60/night'),
-    Item(
-        image: 'assets/images/Rectangle 14@2x.png',
-        rate: ' 4.5',
-        name: 'Savoy Sharm El Sheikh',
-        location: 'Soho Square, Sharm El Sheikh Egypt',
-        price: '60/night'),Item(
-        image: 'assets/images/Rectangle 14@2x.png',
-        rate: ' 4.5',
-        name: 'Savoy Sharm El Sheikh',
-        location: 'Soho Square, Sharm El Sheikh Egypt',
-        price: '60/night'),
-  ];
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -83,10 +48,10 @@ class HomeHotelTab extends StatelessWidget {
             itemBuilder: (context, index) => Row(
               children: [
                 ItemContainer(
-                    viewItem: items[index])
+                    viewItem: dataprovider.Hotel[index])
               ],
             ),
-            itemCount: items.length,
+            itemCount: dataprovider.Hotel.length,
           ),
         ),
         

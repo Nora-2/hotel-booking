@@ -23,9 +23,9 @@ class ProductDetailsCubit extends Cubit<ProductDetailsStates>{
     emit(ProductDetailsChangeFavoritesState());
   }
 
-  // changeQuantity(int value){
-  //   quantity = value;
-  //   emit(ProductDetailsChangeQuantityState());
-  // }
+  changeQuantity(int value){
+    quantity = value;
+    emit(ProductDetailsChangeQuantityState());
+  }
 
 }

@@ -1,5 +1,5 @@
 import 'package:bookly/Features/home/data/models/cubit_home/homecubit_cubit.dart';
-import 'package:bookly/constants.dart';
+import 'package:bookly/core/utils/constants.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

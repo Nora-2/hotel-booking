@@ -1,7 +1,8 @@
+import 'package:bookly/Features/Booking/presentation/views/booking_view_screen.dart';
 import 'package:bookly/Features/home/presentation/manger/itemModel.dart';
 import 'package:bookly/Features/product_details/presentation/manger/product_details_cubit.dart';
 import 'package:bookly/Features/product_details/presentation/manger/product_details_states.dart';
-import 'package:bookly/constants.dart';
+import 'package:bookly/core/utils/constants.dart';
 import 'package:bookly/core/widgets/custom_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -84,7 +85,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                 fontWeight: FontWeight.w600) )
                               ]),
                               Column(children: [
-                                Icon(Icons.party_mode),
+                                Icon(Icons.celebration_rounded),
                                 Text('Party',style:GoogleFonts.lato().copyWith(
                                 fontSize: 14,
                                 color: Colors.black,
@@ -145,6 +146,11 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                     Align(
                                       alignment: Alignment.bottomRight,
                                         child: CustomButton(
+                                          onPressed: () {
+                                            Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => (bookingview())));
+                 
+                                          },
                                           borderRadius: BorderRadius.circular(25),
                                             backgroundColor: kPrimaryColor,
                                             textColor: Colors.white,
@@ -270,9 +276,5 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
       ),
     );
   }
-  // Text text1=Text(' Read more',style:GoogleFonts.lato().copyWith(
-  //                               fontSize: 14,
-  //                               color:kPrimaryColor ,
-  //                               fontFamily: 'Tajawal',
-  //                               fontWeight: FontWeight.w600) );
+
 }

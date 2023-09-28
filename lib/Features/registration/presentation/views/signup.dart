@@ -3,7 +3,7 @@ import 'package:bookly/Features/home/presentation/views/homelayout.dart';
 import 'package:bookly/Features/registration/presentation/views/background.dart';
 import 'package:bookly/Features/registration/presentation/views/customtxtformfield.dart';
 import 'package:bookly/Features/registration/presentation/views/signin.dart';
-import 'package:bookly/constants.dart';
+import 'package:bookly/core/utils/constants.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -74,6 +74,7 @@ class SignUp extends StatelessWidget {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.02,
                   ),
+               
                   Padding(
                     padding: EdgeInsets.only(left: 30, right: 30),
                     child: Material(

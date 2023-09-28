@@ -6,7 +6,7 @@ import 'package:bookly/Features/registration/presentation/views/background.dart'
 import 'package:bookly/Features/registration/presentation/views/customtxtformfield.dart';
 import 'package:bookly/Features/registration/presentation/views/forgetpassword.dart';
 import 'package:bookly/Features/registration/presentation/views/signup.dart';
-import 'package:bookly/constants.dart';
+import 'package:bookly/core/utils/constants.dart';
 
 import 'package:flutter/material.dart';
 
@@ -86,7 +86,6 @@ class SignIn extends StatelessWidget {
                             size: MediaQuery.of(context).size.width * 0.05,
                             color: kPrimaryColor,
                           ),
-                          text: TextInputType.visiblePassword,
                         )
                         ),
                       ),

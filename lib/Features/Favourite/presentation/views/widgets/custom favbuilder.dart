@@ -14,8 +14,9 @@ class ItemfavContainer extends StatelessWidget {
     crossAxisAlignment: CrossAxisAlignment.center,
       children: [Image.asset(
               viewItem.image,
-              width: 150,
-              height: 170,
+              width: 170,
+              height: 120,
+              fit: BoxFit.cover,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 10),

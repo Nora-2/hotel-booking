@@ -1,6 +1,8 @@
+
 import 'package:bookly/Features/registration/presentation/views/background.dart';
 import 'package:bookly/Features/registration/presentation/views/customtxtformfield.dart';
-import 'package:bookly/Features/registration/presentation/views/signin.dart';
+
+import 'package:bookly/core/utils/function/custom_snack_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -92,46 +94,51 @@ class changepass extends StatelessWidget {
                             text: TextInputType.visiblePassword,
                           )),
                     ),
-                   SizedBox(
+                    SizedBox(
                       height: MediaQuery.of(context).size.height * 0.15,
                     ),
                     Material(
-                      elevation: 4,
-                      borderRadius: BorderRadius.circular(
-                        MediaQuery.of(context).size.height * 0.1,
-                      ),
-                      child: GestureDetector(
-                        onTap:  () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => (SignIn())));
-                  },
-                        child: Container(
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                Color.fromARGB(255, 255, 230, 85),
-                                Color.fromARGB(255, 176, 74, 166),
-                              ],
-                              begin: Alignment.bottomRight,
-                              end: Alignment.topLeft,
+                        elevation: 4,
+                        borderRadius: BorderRadius.circular(
+                          MediaQuery.of(context).size.height * 0.1,
+                        ),
+                        
+                        child: GestureDetector(
+                          onTap: ()  {
+            
+          
+                            customSnackBar(
+                              
+                                  context, 'Password Changed Successfully');
+                           },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [
+                                  Color.fromARGB(255, 255, 230, 85),
+                                  Color.fromARGB(255, 176, 74, 166),
+                                ],
+                                begin: Alignment.bottomRight,
+                                end: Alignment.topLeft,
+                              ),
+                              borderRadius: BorderRadius.circular(
+                                MediaQuery.of(context).size.height * 0.1,
+                              ),
                             ),
-                            borderRadius: BorderRadius.circular(
-                              MediaQuery.of(context).size.height * 0.1,
+                            width: MediaQuery.of(context).size.width * 0.30,
+                            height: MediaQuery.of(context).size.height * 0.07,
+                            child: Center(
+                              child: Text(
+                                'confirm',
+                                style: GoogleFonts.lato().copyWith(
+                                    fontSize: 15,
+                                    color: Colors.white,
+                                    fontFamily: 'Tajawal',
+                                    fontWeight: FontWeight.w700),
+                              ),
                             ),
                           ),
-                          width: MediaQuery.of(context).size.width * 0.30,
-                          height: MediaQuery.of(context).size.height * 0.07,
-                          child: Center(
-                            child: Text('confirm',style: GoogleFonts.lato().copyWith(
-                                            fontSize: 15,
-                                            color: Colors.white,
-                                            fontFamily: 'Tajawal',
-                                            fontWeight: FontWeight.w700),
-                                      ),
-                          ),),
-                      )
-                      ),
-                    
+                        )),
                   ],
                 ),
               ),
@@ -145,3 +152,6 @@ class changepass extends StatelessWidget {
     );
   }
 }
+
+
+                     

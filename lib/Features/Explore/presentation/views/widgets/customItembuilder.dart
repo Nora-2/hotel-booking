@@ -25,7 +25,8 @@ class itembuilder extends StatelessWidget {
         children: [Image.asset(
                 viewItem.image,
                 width: 150,
-                height: 170,
+                height: 120,
+                fit: BoxFit.fill,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 10),

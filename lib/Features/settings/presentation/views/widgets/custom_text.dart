@@ -1,18 +1,18 @@
+
+import 'package:bookly/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CustomText extends StatelessWidget {
-  const CustomText({super.key, required this.text});
- final String text;
+   CustomText({super.key, required this.text, this.color=kPrimaryColor});
+  final String text;
+  Color ?color=kPrimaryColor;
   @override
   Widget build(BuildContext context) {
-    return  Text(
-                text,
-                style: TextStyle(
-                    color: Color(
-                      0xff870084,
-                    ),
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600),
-              );
+    return Text(
+      text,
+      style: TextStyle(
+          color: color, fontSize: 16, fontWeight: FontWeight.w600),
+    );
   }
 }
