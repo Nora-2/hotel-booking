@@ -1,6 +1,7 @@
 import 'package:bookly/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
+
 // ignore: must_be_immutable
 class CustomTextFieldsetting extends StatelessWidget {
   CustomTextFieldsetting({super.key, this.Hint,this.preicon});
@@ -32,6 +33,8 @@ class CustomTextFieldsetting extends StatelessWidget {
       ),
       obscureText: ispassword,
       obscuringCharacter: '*',
+
+
     );
   }
 }

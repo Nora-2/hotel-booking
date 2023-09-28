@@ -37,6 +37,7 @@ class Hotel extends StatelessWidget {
             bookingview.id: (context) => const bookingview(),
             bookingPyment.id:(context) => const bookingPyment()
 
+
           },
           initialRoute: SplashScreen.id,
           debugShowCheckedModeBanner: false,
@@ -45,5 +46,6 @@ class Hotel extends StatelessWidget {
                 GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
           ),
         ));
+
   }
 }
