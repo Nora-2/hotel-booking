@@ -14,7 +14,7 @@ class HomeHotelTab extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 450,
+            height: size.height*.3,
         ),
         Padding(
           padding: const EdgeInsets.all(5.0),
@@ -41,7 +41,7 @@ class HomeHotelTab extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: size.height * 0.44,
+          height: size.height * 0.25,
           child: ListView.builder(
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,

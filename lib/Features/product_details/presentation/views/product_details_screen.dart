@@ -21,7 +21,7 @@ class ProductDetailsScreen extends StatefulWidget {
 class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
   @override
   Widget build(BuildContext context) {
-    // Size size = MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size;
     return BlocProvider(
       create: (BuildContext context) => ProductDetailsCubit(),
       child: BlocConsumer<ProductDetailsCubit, ProductDetailsStates>(
@@ -146,6 +146,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                     Align(
                                       alignment: Alignment.bottomRight,
                                         child: CustomButton(
+                                        height:size.height *.05,
+                          width:size.width *.4,
                                           onPressed: () {
                                             Navigator.push(context,
                         MaterialPageRoute(builder: (context) => (bookingview())));

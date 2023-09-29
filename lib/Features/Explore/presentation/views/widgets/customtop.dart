@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Container topwidget() {
+Container topwidget(double size) {
     return Container(
                 height: 200,
                 width: double.infinity,
@@ -19,7 +19,7 @@ Container topwidget() {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       SizedBox(
-                        width: 200,
+                        width: size
                       ),
                       Text(
                         'Explore Now',

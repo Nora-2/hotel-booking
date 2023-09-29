@@ -67,7 +67,7 @@ class _Explore extends State<Explore> with SingleTickerProviderStateMixin {
                             ),
                           ),
                           SizedBox(
-                            height: size.height * 0.50,
+                            height: size.height * 0.63,
                             child: TabBarView(
                               controller: _tabcontroller,
                               children: [
@@ -83,7 +83,7 @@ class _Explore extends State<Explore> with SingleTickerProviderStateMixin {
                   ),
                 ],
               ),
-              topwidget(),
+              topwidget(size.height *.15,),
               searchandtabbar(size: size, tabcontroller: _tabcontroller),
             ],
           ),

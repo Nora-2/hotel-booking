@@ -26,6 +26,7 @@ DateTime? enddate;
 class _bookingPymentState extends State<bookingPyment> {
   @override
   Widget build(BuildContext context) {
+      Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -84,14 +85,17 @@ class _bookingPymentState extends State<bookingPyment> {
                       const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image(
-                            image: AssetImage('assets/images/download.jpeg'),
-                            width: 400,
-                            height: 240,
-                            fit: BoxFit.fill,
+                         Image(
+                              image: AssetImage('assets/images/download.jpeg'),
+                              width: 350,
+                              height: 240,
+                              fit: BoxFit.fill,
+                            ),
+                        ]
+                           
                           ),
-                        ],
-                      ),
+                        
+                      
                       SizedBox(
                         height: 40,
                       ),

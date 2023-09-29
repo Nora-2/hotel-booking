@@ -85,6 +85,7 @@ class forgetpassScreen extends StatelessWidget {
                       Center(
                         child: CustomButton(
                             width: 200,
+                            height: 100,
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
                                 customSnackBar(context,

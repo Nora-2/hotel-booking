@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class customTop extends StatelessWidget {
-  customTop({ super.key, });
+  customTop({ super.key,this.height=20 });
  
-
+ final double? height;
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 20,
+        height: height,
         width: double.infinity,
         decoration: const BoxDecoration(
           color: kPrimaryColor,

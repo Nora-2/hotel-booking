@@ -10,6 +10,7 @@ class ItemfavContainer extends StatelessWidget {
   final Item viewItem;
   @override
   Widget build(BuildContext context) {
+      Size size = MediaQuery.of(context).size;
     return Row(mainAxisAlignment:MainAxisAlignment.start,
     crossAxisAlignment: CrossAxisAlignment.center,
       children: [Image.asset(
@@ -57,7 +58,7 @@ class ItemfavContainer extends StatelessWidget {
                   Text('\$ ${viewItem.price}/night ',style: TextStyle(color: Colors.black),),
                 ],
               ),
-             SizedBox(width: 180,),Icon(Icons.favorite,color: Colors.red,),])
+             SizedBox(width: size.width *.15,),Icon(Icons.favorite,color: Colors.red,),])
                    ],),
             )
             ],);

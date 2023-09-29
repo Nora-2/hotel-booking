@@ -34,10 +34,10 @@ class _favouriteView extends State<favouriteView>
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: 150,
+                    height: size.height * 0.18,
                   ),
                   SizedBox(
-                    height: size.height * 0.65,
+                    height: size.height * 0.735,
                     child: ListView.builder(
                       shrinkWrap: true,
                       itemBuilder: (context, index) => Padding(
@@ -65,7 +65,7 @@ class _favouriteView extends State<favouriteView>
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         SizedBox(
-                          width: 200,
+                       width:  size.height *.15,
                         ),
                         Text(
                           'Favorite',

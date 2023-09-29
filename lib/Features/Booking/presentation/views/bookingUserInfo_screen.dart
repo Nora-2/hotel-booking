@@ -27,6 +27,7 @@ DateTime? enddate;
 class _bookingUserInfoState extends State<bookingUserInfo> {
   @override
   Widget build(BuildContext context) {
+      Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -61,47 +62,46 @@ class _bookingUserInfoState extends State<bookingUserInfo> {
                         height: 100,
                       ),
                       Row(
-                        children: [
-                          
-                          Column(
-                     mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              CustomText(text: 'First name'),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Container(
-                                height: 40,
-                                width: 200,
-                                child: CustomTextFieldsetting(
-                                  Hint: 'Mohamed',
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                CustomText(text: 'First name'),
+                                SizedBox(
+                                  height: 5,
                                 ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            width: 60,
-                          ),
-                          Column(
-                                 mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              CustomText(text: 'Last name'),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Container(
-                                height: 40,
-                                width: 200,
-                                child: CustomTextFieldsetting(
-                                  Hint: 'Ahmed',
+                                Container(
+                                  height: 40,
+                                  width: size.width * .4,
+                                  child: CustomTextFieldsetting(
+                                    Hint: 'Mohamed',
+                                  ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
+                              ],
+                            ),
+                            SizedBox(
+                            width: size.width * .09,
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                CustomText(text: 'Last name'),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Container(
+                                  height: 40,
+                                  width: size.width * .4,
+                                  child: CustomTextFieldsetting(
+                                    Hint: 'Ahmed',
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       SizedBox(
                         height: 25,
                       ),

@@ -4,13 +4,17 @@ import 'package:google_fonts/google_fonts.dart';
 
 class topProfile extends StatelessWidget {
   const topProfile({
+    required this.height,
+    
     super.key,
   });
+ final double? height;
 
   @override
   Widget build(BuildContext context) {
+      Size size = MediaQuery.of(context).size;
     return Container(
-      height: 260,
+      height: height,
       width: double.infinity,
       decoration: BoxDecoration(
         color: kPrimaryColor,
@@ -45,7 +49,7 @@ class topProfile extends StatelessWidget {
               ],
             ),
             SizedBox(
-              width: 270,
+              width: size.width *.4,
             ),
             CircleAvatar(
               backgroundColor: Colors.white,

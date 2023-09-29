@@ -15,6 +15,7 @@ class LogIn extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
+      Size size = MediaQuery.of(context).size;
     return Scaffold(
         extendBodyBehindAppBar: true,
         appBar: AppBar(
@@ -100,7 +101,8 @@ class LogIn extends StatelessWidget {
                       Column(mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                         children: [CustomButton(
-                          width:200 ,
+                          height:size.height *.055,
+                          width:size.width *.6,
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
                               Navigator.push(

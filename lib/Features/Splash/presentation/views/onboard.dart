@@ -1,5 +1,4 @@
 
-import 'package:bookly/Features/registration/presentation/views/signup.dart';
 import 'package:bookly/Features/registration/presentation/views/widgets/login.dart';
 import 'package:bookly/core/utils/constants.dart';
 import 'package:flutter/cupertino.dart';
@@ -11,6 +10,7 @@ class onboardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+      Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
           decoration: const BoxDecoration(
@@ -59,23 +59,28 @@ class onboardView extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               )),
               Padding(
-                padding: const EdgeInsets.only(left: 320,top:18),
+                padding: const EdgeInsets.only(top:18),
                 child: GestureDetector(
                   onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => (LogIn())));
                     },
-                  child: Container(
-                    
-                    height: 50,
-                      decoration: BoxDecoration(color:kPrimaryColor,
-                      borderRadius: BorderRadius.only(topLeft: Radius.circular(20),bottomLeft: Radius.circular(20)))
-                      ,
-                      child: Center(child: Text('Press to START',style:GoogleFonts.lato().copyWith(
-                    fontSize: 18,
-                    color: Colors.white,
-                    fontFamily: 'Tajawal',
-                    fontWeight: FontWeight.w500),))),
+                  child: Row(
+                    children: [
+                      SizedBox(width: size.width * .5,),
+                      Container(
+                        width: size.width * .5,
+                        height: 50,
+                          decoration: BoxDecoration(color:kPrimaryColor,
+                          borderRadius: BorderRadius.only(topLeft: Radius.circular(20),bottomLeft: Radius.circular(20)))
+                          ,
+                          child: Center(child: Text('Press to START',style:GoogleFonts.lato().copyWith(
+                        fontSize: 18,
+                        color: Colors.white,
+                        fontFamily: 'Tajawal',
+                        fontWeight: FontWeight.w500),))),
+                    ],
+                  ),
                 ),
               )
             ],

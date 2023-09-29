@@ -40,8 +40,10 @@ class _MainHomeScreenState extends State<MainHomeScreen>
             children: [
               SingleChildScrollView(
                   child: Column(
+                    
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
+                        SizedBox(height: size.height *.25,),
                     DefaultTabController(
                         length: 3,
                         child: Padding(
@@ -50,7 +52,7 @@ class _MainHomeScreenState extends State<MainHomeScreen>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SizedBox(
-                                height: size.height * 1.6,
+                                height: size.height *3,
                                 child: TabBarView(
                                   controller: _tabcontroller,
                                   children: [
@@ -64,7 +66,7 @@ class _MainHomeScreenState extends State<MainHomeScreen>
                           ),
                         ))
                   ])),
-              topProfile(),
+              topProfile( height:size.height * .4,),
               Column(mainAxisAlignment: MainAxisAlignment.start, children: [
                 SizedBox(height: size.height * 0.12),
                 CustomSearchBox(size: size),

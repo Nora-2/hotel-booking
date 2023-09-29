@@ -17,6 +17,7 @@ class SignIn extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
+      Size size = MediaQuery.of(context).size;
     return Scaffold(
       extendBodyBehindAppBar: true,
     appBar: AppBar(backgroundColor:Colors.transparent,

@@ -337,8 +337,8 @@ class _bookingviewState extends State<bookingview> {
                             ],
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 200),
+                        Center(
+                         
                           child: Column(
                             children: [
                               Text(

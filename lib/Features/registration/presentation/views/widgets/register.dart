@@ -14,6 +14,7 @@ class Register extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
+      Size size = MediaQuery.of(context).size;
     return Scaffold(
         extendBodyBehindAppBar: true,
         appBar: AppBar(
@@ -62,7 +63,7 @@ class Register extends StatelessWidget {
                                 ),
                                 Container(
                                   height: 40,
-                                  width: 200,
+                                  width: size.width * .4,
                                   child: CustomTextFieldsetting(
                                     Hint: 'Mohamed',
                                   ),
@@ -70,7 +71,7 @@ class Register extends StatelessWidget {
                               ],
                             ),
                             SizedBox(
-                              width: 60,
+                            width: size.width * .09,
                             ),
                             Column(
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -82,7 +83,7 @@ class Register extends StatelessWidget {
                                 ),
                                 Container(
                                   height: 40,
-                                  width: 200,
+                                  width: size.width * .4,
                                   child: CustomTextFieldsetting(
                                     Hint: 'Ahmed',
                                   ),
@@ -148,7 +149,8 @@ class Register extends StatelessWidget {
                         ),
                         Center(
                           child: CustomButton(
-                              width: 200,
+                              height:size.height *.055,
+                          width:size.width *.6,
                               onPressed: () {
                                 if (_formKey.currentState!.validate()) {
                                   Navigator.push(
