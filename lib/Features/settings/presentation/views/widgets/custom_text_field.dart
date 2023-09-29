@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class CustomTextFieldsetting extends StatelessWidget {
-  CustomTextFieldsetting({super.key, this.Hint,this.preicon});
-  bool ispassword = false;
+  CustomTextFieldsetting({super.key, this.Hint,this.preicon,this.ispassword=false});
+  bool ?ispassword = false;
   String? Hint;
   Widget ?preicon;
   @override
@@ -31,7 +31,7 @@ class CustomTextFieldsetting extends StatelessWidget {
           ),
         ),
       ),
-      obscureText: ispassword,
+      obscureText: ispassword!,
       obscuringCharacter: '*',
 
 

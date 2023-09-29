@@ -7,6 +7,9 @@ import 'package:bookly/Features/home/presentation/views/homelayout.dart';
 import 'package:bookly/Features/payment/presentation/views/paymentView.dart';
 import 'package:bookly/Features/product_details/presentation/manger/product_details_cubit.dart';
 import 'package:bookly/Features/profile/presentation/views/widgets/profileScreen.dart';
+import 'package:bookly/Features/registration/presentation/views/widgets/forgetpassword_screen.dart';
+import 'package:bookly/Features/registration/presentation/views/widgets/login.dart';
+import 'package:bookly/Features/registration/presentation/views/widgets/register.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -33,11 +36,12 @@ class Hotel extends StatelessWidget {
             SplashScreen.id: (context) => const SplashScreen(),
             ProfileView.id: (context) => const ProfileView(),
             paymentView.id: (context) => const paymentView(),
-            bookingUserInfo.id:(context) =>const bookingUserInfo(),
+            bookingUserInfo.id: (context) => const bookingUserInfo(),
             bookingview.id: (context) => const bookingview(),
-            bookingPyment.id:(context) => const bookingPyment()
-
-
+            bookingPyment.id: (context) => const bookingPyment(),
+            LogIn.id: (context) => LogIn(),
+            Register.id: (context) => Register(),
+            forgetpassScreen.id:(context) => forgetpassScreen()
           },
           initialRoute: SplashScreen.id,
           debugShowCheckedModeBanner: false,
@@ -46,6 +50,5 @@ class Hotel extends StatelessWidget {
                 GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
           ),
         ));
-
   }
 }

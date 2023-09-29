@@ -205,12 +205,18 @@ class _bookingPymentState extends State<bookingPyment> {
                               ]),
                           child: TextButton(
                             onPressed: () {
-                              customSnackBar(
-                                  context, 'payment Done Successfully');
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => (HomeLayout())));
+                              customSnackBar(context,
+                                  text: 'payment Done Successfully',
+                                  action: SnackBarAction(
+                                    textColor: Colors.white,
+                                      label: 'ok',
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    (HomeLayout())));
+                                      }));
                             },
                             child: Text(
                               'Pay',

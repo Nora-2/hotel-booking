@@ -1,6 +1,6 @@
-
 import 'package:bookly/Features/registration/presentation/views/background.dart';
 import 'package:bookly/Features/registration/presentation/views/customtxtformfield.dart';
+import 'package:bookly/Features/registration/presentation/views/signin.dart';
 
 import 'package:bookly/core/utils/function/custom_snack_bar.dart';
 import 'package:flutter/material.dart';
@@ -102,15 +102,15 @@ class changepass extends StatelessWidget {
                         borderRadius: BorderRadius.circular(
                           MediaQuery.of(context).size.height * 0.1,
                         ),
-                        
                         child: GestureDetector(
-                          onTap: ()  {
-            
-          
+                          onTap: () {
                             customSnackBar(
                               
-                                  context, 'Password Changed Successfully');
-                           },
+                                context, text: 'Password Changed Successfully',action: SnackBarAction(textColor: Colors.white, label: 'ok', onPressed: (){ Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => (SignIn())));}));
+                          },
                           child: Container(
                             decoration: BoxDecoration(
                               gradient: LinearGradient(
@@ -152,6 +152,3 @@ class changepass extends StatelessWidget {
     );
   }
 }
-
-
-                     

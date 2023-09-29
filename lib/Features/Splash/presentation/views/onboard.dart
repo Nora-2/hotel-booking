@@ -1,5 +1,6 @@
 
 import 'package:bookly/Features/registration/presentation/views/signup.dart';
+import 'package:bookly/Features/registration/presentation/views/widgets/login.dart';
 import 'package:bookly/core/utils/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +63,7 @@ class onboardView extends StatelessWidget {
                 child: GestureDetector(
                   onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => (SignUp())));
+                          MaterialPageRoute(builder: (context) => (LogIn())));
                     },
                   child: Container(
                     
