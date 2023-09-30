@@ -13,6 +13,7 @@ class forgetpassScreen extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
+        Size size = MediaQuery.of(context).size;
     return Scaffold(
         extendBodyBehindAppBar: true,
         appBar: AppBar(
@@ -84,8 +85,9 @@ class forgetpassScreen extends StatelessWidget {
                       ),
                       Center(
                         child: CustomButton(
-                            width: 200,
-                            height: 100,
+                            width: size.width*.5,
+                height: size.height*.05,
+           
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
                                 customSnackBar(context,

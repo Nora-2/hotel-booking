@@ -23,17 +23,21 @@ class ItemfavContainer extends StatelessWidget {
               padding: const EdgeInsets.only(left: 10),
               child: Column(mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [Text(
-                        viewItem.name,
-                        style: TextStyle(fontSize: 18,color: Colors.black),
-                      ),
+                children: [Container(
+                   width: size.width*.5,
+                  child: Text(
+                     maxLines: 1,
+                          viewItem.name,
+                          style: TextStyle(overflow: TextOverflow.ellipsis,fontSize: 18,color: Colors.black),
+                        ),
+                ),
                       Row(
                         children: [
               Icon(
                 Icons.location_on_outlined,
                 color: const Color(0xff870084),
               ),
-              Container(width: 180,
+              Container( width: size.width*.3,
                 child: Text(
                   viewItem.location,
                   maxLines: 1,
@@ -49,6 +53,7 @@ class ItemfavContainer extends StatelessWidget {
                       ),
                      Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
             
             children: [
               Column(
@@ -58,7 +63,9 @@ class ItemfavContainer extends StatelessWidget {
                   Text('\$ ${viewItem.price}/night ',style: TextStyle(color: Colors.black),),
                 ],
               ),
-             SizedBox(width: size.width *.15,),Icon(Icons.favorite,color: Colors.red,),])
+             SizedBox(width: size.width *.08,),
+          
+            Icon(Icons.favorite,color: Colors.red,),])
                    ],),
             )
             ],);

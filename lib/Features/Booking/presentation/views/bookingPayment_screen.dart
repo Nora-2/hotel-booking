@@ -196,8 +196,8 @@ class _bookingPymentState extends State<bookingPyment> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 110),
                         child: Container(
-                          width: 300,
-                          height: 40,
+                         width: size.width*.5,
+                height: size.height*.05,
                           decoration: BoxDecoration(
                               color: Color(0xffFFC443),
                               borderRadius: BorderRadius.circular(10),

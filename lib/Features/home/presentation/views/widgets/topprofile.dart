@@ -12,7 +12,7 @@ class topProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      Size size = MediaQuery.of(context).size;
+      // Size size = MediaQuery.of(context).size;
     return Container(
       height: height,
       width: double.infinity,
@@ -25,7 +25,7 @@ class topProfile extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Column(
@@ -48,9 +48,7 @@ class topProfile extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
-              width: size.width *.4,
-            ),
+            
             CircleAvatar(
               backgroundColor: Colors.white,
               radius: 30,

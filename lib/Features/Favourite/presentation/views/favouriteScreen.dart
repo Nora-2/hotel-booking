@@ -30,28 +30,33 @@ class _favouriteView extends State<favouriteView>
           child: Stack(
             alignment: Alignment.topCenter,
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    height: size.height * 0.18,
-                  ),
-                  SizedBox(
-                    height: size.height * 0.735,
-                    child: ListView.builder(
-                      shrinkWrap: true,
-                      itemBuilder: (context, index) => Padding(
-                        padding: const EdgeInsets.only(bottom:10.0),
-                        child: ItemfavContainer(
-                            viewItem: dataprovider.favourite[index]),
-                      ),
-                      itemCount: dataprovider.favourite.length,
+              SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: size.height * 0.25,
+                      width: double.infinity,
                     ),
-                  ),
-                ],
+                    SizedBox(
+                      height: size.height * 1.2,
+                      width: double.infinity,
+                      child: ListView.builder(
+                          physics: NeverScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                        itemBuilder: (context, index) => Padding(
+                          padding: const EdgeInsets.only(bottom:10.0),
+                          child: ItemfavContainer(
+                              viewItem: dataprovider.favourite[index]),
+                        ),
+                        itemCount: dataprovider.favourite.length,
+                      ),
+                    ),
+                  ],
+                ),
               ),
               Container(
-                  height: 150,
+                  height: size.height * 0.2,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: kPrimaryColor,
@@ -61,22 +66,17 @@ class _favouriteView extends State<favouriteView>
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(top: 30),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        SizedBox(
-                       width:  size.height *.15,
+                    child: Align(
+                      alignment: Alignment.topCenter,
+                      child: Text(
+                        'Favorite',
+                        style: GoogleFonts.lato().copyWith(
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: 'Tajawal',
                         ),
-                        Text(
-                          'Favorite',
-                          style: GoogleFonts.lato().copyWith(
-                            fontSize: 20,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: 'Tajawal',
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
                   )),
               Column(mainAxisAlignment: MainAxisAlignment.start, children: [

@@ -14,7 +14,7 @@ class HomeBeachTab extends StatelessWidget {
     return Column(
       children: [
         Container(
-            height: size.height*.3,
+             height: size.height*.35,
         ),
         
         Padding(
@@ -42,7 +42,7 @@ class HomeBeachTab extends StatelessWidget {
           ),
         ),
         SizedBox(
-            height: size.height * 0.25,
+            height: size.height * 0.3,
           child: ListView.builder(
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,

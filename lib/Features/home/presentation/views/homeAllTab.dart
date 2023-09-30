@@ -39,7 +39,7 @@ class HomeAllTab extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: size.height * 0.25,
+          height: size.height * 0.3,
           child: ListView.builder(
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
@@ -77,7 +77,7 @@ class HomeAllTab extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: size.height * 0.25,
+          height: size.height * 0.3,
           child: ListView.builder(
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,

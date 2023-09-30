@@ -20,9 +20,7 @@ class searchandtabbar extends StatelessWidget {
       ),
       SizedBox(height: size.height * 0.02),
       CustomSearchBox(size: size),
-      SizedBox(
-        height: 10,
-      ),
+      SizedBox(height: size.height * 0.03),
       CustomTabBar(
         c: _tabcontroller,
       ),

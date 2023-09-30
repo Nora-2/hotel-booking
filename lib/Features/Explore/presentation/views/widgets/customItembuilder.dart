@@ -11,6 +11,7 @@ class itembuilder extends StatelessWidget {
   final Item viewItem;
   @override
   Widget build(BuildContext context) {
+        Size size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap:()=> Navigator.push(
                 context,
@@ -20,48 +21,56 @@ class itembuilder extends StatelessWidget {
                   ),
                 ),
               ),
-      child: Row(mainAxisAlignment:MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.center,
-        children: [Image.asset(
-                viewItem.image,
-                width: 150,
-                height: 120,
-                fit: BoxFit.fill,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10),
-                child: Column(mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [Text(
-                          viewItem.name,
-                          style: TextStyle(fontSize: 18,color: Colors.black),
-                        ),
-                        Row(
-                          children: [
-                Icon(
-                  Icons.location_on_outlined,
-                  color: const Color(0xff870084),
+      child: Container(
+width: double.infinity,
+        child: Row(mainAxisAlignment:MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+          children: [Image.asset(
+                  viewItem.image,
+                 width: size.width*.4,
+                  height: size.height*.15,
+                  fit: BoxFit.fill,
                 ),
-                Container(
-                  width: 180,
-                  child: Text(
-                    viewItem.location,
-                    maxLines: 1,
-                    softWrap: false,
-                    style: TextStyle(
-                      overflow: TextOverflow.ellipsis,
-                      fontSize: 16,
-                      color: const Color(0xff870084),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Column(mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [Container(
+                      width: size.width*.5,
+                      child: Text(
+                              viewItem.name,
+                              maxLines: 1,
+                               overflow: TextOverflow.ellipsis,
+                              style: TextStyle(fontSize: 18,color: Colors.black),
+                            ),
+                    ),
+                          Row(
+                            children: [
+                  Icon(
+                    Icons.location_on_outlined,
+                    color: const Color(0xff870084),
+                  ),
+                  Container(
+                    width: size.width*.3,
+                    child: Text(
+                      viewItem.location,
+                      maxLines: 1,
+                      softWrap: false,
+                      style: TextStyle(
+                        overflow: TextOverflow.ellipsis,
+                        fontSize: 16,
+                        color: const Color(0xff870084),
+                      ),
                     ),
                   ),
-                ),
-                          ],
-                        ),
-                        CustomRatingStars(),
-                        Text('\$ ${viewItem.price}/night ',style: TextStyle(color: Colors.black),),
-                     ],),
-              )
-              ],),
+                            ],
+                          ),
+                          CustomRatingStars(),
+                          Text('\$ ${viewItem.price}/night ',style: TextStyle(color: Colors.black),),
+                       ],),
+                )
+                ],),
+      ),
     );
   }
 }

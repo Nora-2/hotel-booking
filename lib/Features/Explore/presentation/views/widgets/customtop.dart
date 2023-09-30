@@ -3,9 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Container topwidget(double size) {
+Container topwidget({double?size,height}) {
     return Container(
-                height: 200,
+                height:height,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: kPrimaryColor,
@@ -14,14 +14,10 @@ Container topwidget(double size) {
                       bottomRight: Radius.circular(50)),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 30),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      SizedBox(
-                        width: size
-                      ),
-                      Text(
+                    padding: const EdgeInsets.only(top: 30),
+                    child: Align(
+                      alignment: Alignment.topCenter,
+                      child: Text(
                         'Explore Now',
                         style: GoogleFonts.lato().copyWith(
                           fontSize: 20,
@@ -30,7 +26,6 @@ Container topwidget(double size) {
                           fontFamily: 'Tajawal',
                         ),
                       ),
-                    ],
-                  ),
-                ));
+                    ),
+                  ));
   }

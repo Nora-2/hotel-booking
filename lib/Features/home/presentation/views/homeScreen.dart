@@ -52,7 +52,7 @@ class _MainHomeScreenState extends State<MainHomeScreen>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SizedBox(
-                                height: size.height *3,
+                                height: size.height *1,
                                 child: TabBarView(
                                   controller: _tabcontroller,
                                   children: [
@@ -73,7 +73,7 @@ class _MainHomeScreenState extends State<MainHomeScreen>
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Container(
-                    height: 300,
+                    height:  size.height*.35,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -96,7 +96,7 @@ class _MainHomeScreenState extends State<MainHomeScreen>
                             ),
                           ),
                           SizedBox(
-                            height: 10,
+                            height: size.height*.01,
                           ),
                           Align(
                             alignment: Alignment.centerLeft,
@@ -110,7 +110,7 @@ class _MainHomeScreenState extends State<MainHomeScreen>
                             ),
                           ),
                           SizedBox(
-                            height: 10,
+                            height: size.height*.01,
                           ),
                           Row(
                             children: [
@@ -131,7 +131,7 @@ class _MainHomeScreenState extends State<MainHomeScreen>
                             ],
                           ),
                           SizedBox(
-                            height: 10,
+                            height: size.height*.01,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -145,7 +145,7 @@ class _MainHomeScreenState extends State<MainHomeScreen>
                             ],
                           ),
                           SizedBox(
-                            height: 60,
+                           height: size.height*.03,
                           ),
                           custombuttonsearch()
                         ],

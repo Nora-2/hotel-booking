@@ -37,53 +37,55 @@ class _Explore extends State<Explore> with SingleTickerProviderStateMixin {
           child: Stack(
             alignment: Alignment.topCenter,
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  DefaultTabController(
-                    length: 3,
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            height: 210,
-                          ),
-                          Text(
-                            'Location',
-                            style: GoogleFonts.lato().copyWith(
-                              fontSize: 16,
-                              color: Colors.grey,
-                              fontFamily: 'Tajawal',
+              SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    DefaultTabController(
+                      length: 3,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              height: 210,
                             ),
-                          ),
-                          Text(
-                            'Egypt , Cairo',
-                            style: GoogleFonts.lato().copyWith(
-                              fontSize: 20,
-                              color: kPrimaryColor,
-                              fontFamily: 'Tajawal',
+                            Text(
+                              'Location',
+                              style: GoogleFonts.lato().copyWith(
+                                fontSize: 16,
+                                color: Colors.grey,
+                                fontFamily: 'Tajawal',
+                              ),
                             ),
-                          ),
-                          SizedBox(
-                            height: size.height * 0.63,
-                            child: TabBarView(
-                              controller: _tabcontroller,
-                              children: [
-                                all(),
-                                hotel(),
-                                beach(),
-                              ],
+                            Text(
+                              'Egypt , Cairo',
+                              style: GoogleFonts.lato().copyWith(
+                                fontSize: 20,
+                                color: kPrimaryColor,
+                                fontFamily: 'Tajawal',
+                              ),
                             ),
-                          ),
-                        ],
+                            Container(
+                              height: size.height * 1,
+                              child: TabBarView(
+                                controller: _tabcontroller,
+                                children: [
+                                  all(),
+                                  hotel(),
+                                  beach(),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-              topwidget(size.height *.15,),
+              topwidget(size:size.width *.15,height: size.height * 0.25),
               searchandtabbar(size: size, tabcontroller: _tabcontroller),
             ],
           ),

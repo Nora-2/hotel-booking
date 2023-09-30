@@ -21,29 +21,25 @@ class _PaymentViewWidgetState extends State<PaymentViewWidget> {
 
   @override
   Widget build(BuildContext context) {
+        Size size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.only(left: 16.0, right: 30.0, top: 50),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image(
-                image: AssetImage('assets/images/download.jpeg'),
-                width: 350,
-                height: 220,
-                fit: BoxFit.fill,
-              ),
-            ],
+          Center(
+            child: Image.asset('assets/images/download.jpeg',  width: size.width*.8,
+                  height: size.height*.2,
+              fit: BoxFit.cover,),
           ),
-          const SizedBox(
-            height: 5,
+           
+           SizedBox(
+            height: size.height*.05,
           ),
           CustomText(text: 'Name of card'),
-          const SizedBox(
-            height: 5,
+           SizedBox(
+            height: size.height*.02,
           ),
           Container(
             height: 40,
@@ -55,8 +51,8 @@ class _PaymentViewWidgetState extends State<PaymentViewWidget> {
             height: 10,
           ),
           CustomText(text: 'Card number'),
-          const SizedBox(
-            height: 5,
+           SizedBox(
+            height: size.height*.02,
           ),
           Container(
             height: 40,
@@ -68,8 +64,8 @@ class _PaymentViewWidgetState extends State<PaymentViewWidget> {
             height: 10,
           ),
           CustomText(text: 'Expiration date'),
-          const SizedBox(
-            height: 5,
+           SizedBox(
+            height: size.height*.02,
           ),
           Container(
             height: 40,
@@ -79,8 +75,8 @@ class _PaymentViewWidgetState extends State<PaymentViewWidget> {
             height: 10,
           ),
           CustomText(text: 'Security code'),
-          const SizedBox(
-            height: 5,
+           SizedBox(
+            height: size.height*.02,
           ),
           Container(
             height: 40,
@@ -108,28 +104,7 @@ class _PaymentViewWidgetState extends State<PaymentViewWidget> {
             controlAffinity:
                 ListTileControlAffinity.leading, //  <-- leading Checkbox
           )
-          // Row(
-          //   children: [
-          //     Checkbox(
-          //       checkColor: kPrimaryColor,
-          //       focusColor: kPrimaryColor,
-          //       activeColor: kPrimaryColor,
-
-          //       value: false,
-          //       onChanged: (value) {
-          //         value = true;
-          //       },
-          //     ),
-          //     SizedBox(
-          //       width: 20,
-          //     ),
-          //     Text(
-          //       'Set as defult',
-          //       style: TextStyle(
-          //           color: kPrimaryColor, fontWeight: FontWeight.w700),
-          //     )
-          //   ],
-          // )
+     
         ],
       ),
     );
